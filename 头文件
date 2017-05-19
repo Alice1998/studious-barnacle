@@ -1,0 +1,35 @@
+class Image {
+	string filename;
+public :
+	double currentScore;
+	double expectedWin;
+	Image(string _filename) : _filename(filename), currentScore(1400), expectedWin(0.5) {}
+	void Show(void);
+};
+
+class Picture {
+	vector<Image> images;
+public :
+	Picture() : {}
+	pair<int, int> PickTwo(void);
+	void UpdataScore(int winid, int loseid);
+	void AddImage(string filename);
+	void ShowId(int id);
+};
+
+class Tab {
+	vector<int> images;
+	string tabname;
+public :
+	Tab(string _tabname) : tabname(_tabname) {}
+	void AddImage(int id);
+	void DeleteImage(int id);
+};
+
+class Tabset {
+	vector<Tab> Tabs;
+public : 
+	Tabset() : {}
+	void AddImage(string Tabname, int imageid);
+	vector<int> SortImage(vector<int> tabids);
+};
